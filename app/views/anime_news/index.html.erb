@@ -1,0 +1,18 @@
+<%= form_tag "/", method: :get %>
+<%= text_field_tag :query %>
+<%= submit_tag "Search" %>
+
+<% if @response %>
+  <% @response.each do |element| %>
+    <h1>
+      <%= element["name"] %>
+    </h1>
+    <p>
+      <%= element["precision"] %>
+    </p>
+    <p>
+      <%= element["vintage"] %>
+    </p>
+    <a href="<%= element["url"] %>">Link</a>
+  <% end %>
+<% end %>
