@@ -18,4 +18,5 @@ class AnimeNewsController < ApplicationController
     @response = Net::HTTP.get(uri)
     @response = JSON.parse(@response)
   end
+
 end
