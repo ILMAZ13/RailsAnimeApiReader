@@ -1,4 +1,3 @@
-require 'pry'
 class AnimeNewsController < ApplicationController
   def index
     if params[:query].present?
